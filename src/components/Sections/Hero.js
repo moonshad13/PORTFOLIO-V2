@@ -173,7 +173,7 @@ const Hero = () => {
             <div className="wrapper">
               <img
                 className="img"
-                src="/moonshad.jpg"
+                src={process.env.PUBLIC_URL + '/moonshad.jpg'}
                 alt="Profile"
               />
             </div>
