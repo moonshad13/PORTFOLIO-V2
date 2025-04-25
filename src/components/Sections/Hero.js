@@ -7,25 +7,26 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 100px 150px 0; /* Added top padding to account for navbar */
+  padding: 100px 0 0; // Removed horizontal padding
   display: flex;
   align-items: center;
   
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    padding: 100px 100px 0;
+    padding: 100px 0 0;
   }
   
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-    padding: 100px 25px 0;
+    padding: 100px 0 0;
   }
 `;
 
 const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
-  gap: 50px;
+  gap: 100px;
   width: 100%;
   align-items: center;
+  padding-left: 0; // Removed the left padding
   
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     grid-template-columns: 1fr;
@@ -36,6 +37,7 @@ const TextContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 0; // Ensure no padding on the text content
 `;
 
 const StyledPic = styled.div`

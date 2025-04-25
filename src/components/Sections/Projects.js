@@ -19,16 +19,20 @@ const ProjectGrid = styled.div`
 
 const ProjectCard = styled(motion.div)`
   position: absolute;
-  background-color: var(--light-navy);
+  background-color: rgba(17, 34, 64, 0.95);
   padding: 2rem 1.75rem;
-  border-radius: 4px;
+  border-radius: 8px;
   width: 400px;
   height: 400px;
   transition: all 0.3s ease;
+  border: 1px solid var(--light-navy);
+  box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+  backdrop-filter: blur(5px);
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    box-shadow: 0 25px 35px -15px rgba(2, 12, 27, 0.8);
+    border-color: var(--highlight);
   }
 `;
 
@@ -43,6 +47,20 @@ const ProjectTitle = styled.h3`
   margin: 0 0 10px;
   color: var(--lightest-text);
   font-size: 22px;
+`;
+
+const ExternalLinkIcon = styled.a`
+  color: var(--light-text);
+  font-size: 20px;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: var(--highlight);
+  }
+
+  &::after {
+    content: '↗';
+  }
 `;
 
 const ProjectDescription = styled.div`
@@ -215,6 +233,14 @@ const Projects = () => {
                   {projects[currentIndex].subtitle}
                 </div>
               </div>
+              {projects[currentIndex].link && (
+                <ExternalLinkIcon 
+                  href={projects[currentIndex].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Website"
+                />
+              )}
             </ProjectHeader>
             <ProjectDescription>
               {projects[currentIndex].description.map((desc, i) => (
@@ -236,11 +262,6 @@ const Projects = () => {
                 </div>
               )}
             </ProjectDescription>
-            {projects[currentIndex].link && (
-              <ProjectLink href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer">
-                Visit Website →
-              </ProjectLink>
-            )}
           </ProjectCard>
         </AnimatePresence>
         <NavigationIndicator 
