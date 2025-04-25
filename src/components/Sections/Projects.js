@@ -22,7 +22,7 @@ const ProjectCard = styled(motion.div)`
   background-color: rgba(17, 34, 64, 0.95);
   padding: 2rem 1.75rem;
   border-radius: 8px;
-  width: 400px;
+  width: 600px; // Increased from 400px to 600px
   height: 400px;
   transition: all 0.3s ease;
   border: 1px solid var(--light-navy);
