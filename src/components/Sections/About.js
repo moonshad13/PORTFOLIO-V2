@@ -74,8 +74,8 @@ const About = () => {
       <h2>About Me</h2>
       <AboutGrid>
         <div>
-          {/* Your about text content goes here */}
-          <p>Your introduction text here...</p>
+          {}
+          <p></p>
         </div>
         
         <motion.div

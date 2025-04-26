@@ -173,7 +173,7 @@ const Projects = () => {
     }
   };
 
-  // Remove the keyboard event listener useEffect
+  
 
   const variants = {
     enter: (direction) => ({

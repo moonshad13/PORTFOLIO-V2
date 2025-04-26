@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-// Remove this import since we're defining Logo in this file
-// import Logo from '../Layout/Logo';
+
 
 const StyledHeader = styled.header`
   position: fixed;
